@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a196519b-d9a4-4946-ac68-60a155c207ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/getFutureGames.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/getPowerIndex.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/getTeam.py" />
-      <change type="MOVED" beforePath="C:\django projects\nbaScraping\getScores.py" afterPath="$PROJECT_DIR$/src/getScores.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rawScore.html" afterPath="$PROJECT_DIR$/rawScore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/checkData.py" />
+      <change type="DELETED" beforePath="C:\django projects\nbaScraping\src\getFutureGames.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\django projects\nbaScraping\src\getScores.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/getPowerIndex.py" afterPath="$PROJECT_DIR$/src/getPowerIndex.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nbaScraping.iws" />
@@ -35,8 +34,8 @@
       <file leaf-file-name="rawScore.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rawScore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4363637" vertical-offset="76536" max-vertical-offset="77639">
-              <caret line="4574" column="9" selection-start-line="4574" selection-start-column="9" selection-end-line="4574" selection-end-column="9" />
+            <state vertical-scroll-proportion="-3.0545454" vertical-offset="76536" max-vertical-offset="77639">
+              <caret line="4576" column="66" selection-start-line="4576" selection-start-column="66" selection-end-line="4576" selection-end-column="66" />
               <folding>
                 <element signature="n#tr#0;n#table#0;n#!!top" expanded="false" />
                 <element signature="n#tr#1;n#table#0;n#!!top" expanded="false" />
@@ -54,44 +53,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getScores.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/getScores.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1428">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="getPowerIndex.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/getPowerIndex.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="319">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.1598746" vertical-offset="0" max-vertical-offset="319">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="getFutureGames.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/getFutureGames.py">
+        <entry file="file://$PROJECT_DIR$/API/getFutureGames.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="599" max-vertical-offset="918">
+              <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
               <folding>
-                <element signature="e#20#36#0" expanded="true" />
+                <element signature="e#20#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scores.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/scores.csv">
+      <file leaf-file-name="checkData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/checkData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+              <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getScores.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/getScores.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1228" max-vertical-offset="1615">
+              <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,8 +119,13 @@
         <option value="$PROJECT_DIR$/rawScore.html" />
         <option value="$PROJECT_DIR$/getScores.py" />
         <option value="$PROJECT_DIR$/src/getTeam.py" />
-        <option value="$PROJECT_DIR$/src/getScores.py" />
         <option value="$PROJECT_DIR$/src/getFutureGames.py" />
+        <option value="$PROJECT_DIR$/data/scores.csv" />
+        <option value="$PROJECT_DIR$/src/getScores.py" />
+        <option value="$PROJECT_DIR$/API/__init__.py" />
+        <option value="$PROJECT_DIR$/API/getScores.py" />
+        <option value="$PROJECT_DIR$/API/getFutureGames.py" />
+        <option value="$PROJECT_DIR$/src/checkData.py" />
         <option value="$PROJECT_DIR$/src/getPowerIndex.py" />
       </list>
     </option>
@@ -199,6 +205,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nbaScraping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nbaScraping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -215,46 +235,8 @@
       <recent name="C:\django projects\nbaScraping\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.getFutureGames">
-    <configuration default="false" name="getTeams" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="nbaScraping" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/getTeams.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="getScores" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="nbaScraping" />
-      <option name="SCRIPT_NAME" value="C:\django projects\nbaScraping\src\getScores.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="getFutureGames" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.checkData">
+    <configuration default="false" name="getPowerIndex" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -266,7 +248,83 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="nbaScraping" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/getFutureGames.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/getPowerIndex.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="getScores (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="nbaScraping" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/getScores.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="getFutureGames (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/API" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="nbaScraping" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API/getFutureGames.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="getScores (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/API" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="nbaScraping" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API/getScores.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="checkData" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="nbaScraping" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/checkData.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -395,16 +453,20 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.getTeams" />
-      <item index="1" class="java.lang.String" itemvalue="Python.getScores" />
-      <item index="2" class="java.lang.String" itemvalue="Python.getFutureGames" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.getPowerIndex" />
+      <item index="1" class="java.lang.String" itemvalue="Python.getScores (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.getFutureGames (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.getScores (2)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.checkData" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.getFutureGames" />
-        <item index="1" class="java.lang.String" itemvalue="Python.getScores" />
-        <item index="2" class="java.lang.String" itemvalue="Python.getTeams" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.checkData" />
+        <item index="1" class="java.lang.String" itemvalue="Python.getFutureGames (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.getScores (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.getPowerIndex" />
+        <item index="4" class="java.lang.String" itemvalue="Python.getScores (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -419,6 +481,13 @@
       <option name="number" value="Default" />
       <updated>1428352678310</updated>
     </task>
+    <task id="LOCAL-00001" summary="0.1">
+      <created>1428420620427</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1428420620427</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -427,6 +496,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -461,6 +531,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -515,10 +587,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="319">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rawScore.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4363637" vertical-offset="76536" max-vertical-offset="77639">
-          <caret line="4574" column="9" selection-start-line="4574" selection-start-column="9" selection-end-line="4574" selection-end-column="9" />
+        <state vertical-scroll-proportion="-3.0545454" vertical-offset="76536" max-vertical-offset="77639">
+          <caret line="4576" column="66" selection-start-line="4576" selection-start-column="66" selection-end-line="4576" selection-end-column="66" />
           <folding>
             <element signature="n#tr#0;n#table#0;n#!!top" expanded="false" />
             <element signature="n#tr#1;n#table#0;n#!!top" expanded="false" />
@@ -535,36 +615,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/scores.csv">
+    <entry file="file://$PROJECT_DIR$/API/getScores.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/getFutureGames.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1228" max-vertical-offset="1615">
+          <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
           <folding>
-            <element signature="e#20#36#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/getScores.py">
+    <entry file="file://$PROJECT_DIR$/src/checkData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1428">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/getFutureGames.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="599" max-vertical-offset="918">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+          <folding>
+            <element signature="e#20#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/getPowerIndex.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="319">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.1598746" vertical-offset="0" max-vertical-offset="319">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
           <folding />
         </state>
       </provider>
