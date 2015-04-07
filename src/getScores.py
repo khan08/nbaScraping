@@ -1,4 +1,3 @@
-#import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -23,6 +22,7 @@ with open("rawScore.html","w") as f:
 #loop through team
 _team = 'Boston'
 
+
 for row in table.find_all('tr'):
     columns = row.find_all('td')
     try:
@@ -37,7 +37,7 @@ for row in table.find_all('tr'):
         home_team.append(_team if _home else _other_team)
         visit_team.append(_team if not _home else _other_team)
         score_diff.append(_score_diff)
-        #score
+        #scores
         if _home:
             if _won:
                 home_team_score.append(_score[0])
@@ -68,8 +68,14 @@ dic = {'id': match_id,'Date':dates,  'home_team':home_team,
        }
 
 games = pd.DataFrame(dic)
-print(games[['home_team','visit_team','home_score',
-             'visit_score','score diff']])
+#print(games[['home_team','visit_team','home_score',
+            # 'visit_score','score diff']])
+
+
+#output data
+with open('scores.csv','a') as f:
+    games.to_csv(f, header = True)
+
 
 
 
