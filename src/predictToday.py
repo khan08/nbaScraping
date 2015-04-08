@@ -1,6 +1,6 @@
 __author__ = 'Kang'
 from datetime import date, timedelta
-from API.addYesterdayGames import addYesterdayGame, yesterday
+from API.addYesterdayGames import getYesterdayGame, yesterday
 from checkData import games, futureGames
 from API.getScores import getTeam
 import pandas as pd
@@ -12,7 +12,7 @@ pd.set_option('display.width', 1000)
 pd.set_option('max_rows',200, 'max_column',210)
 
 f=open('output.txt','w')
-games = addYesterdayGame(games)
+games = getYesterdayGame(games)
 f.write('check yesterday games correctly loaded\n')
 f.write('-'*100+'\n')
 f.write(str(games.loc[games['Date']==yesterday])+'\n')
