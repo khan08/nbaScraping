@@ -2,6 +2,7 @@ __author__ = 'Kang'
 from getScores import getTeam
 import pandas as pd
 import requests
+import string
 from bs4 import BeautifulSoup
 from datetime import datetime, date
 
@@ -11,7 +12,6 @@ def getFutureGames():
     dates = []
     home_team = []
     visit_team = []
-    _team = 'Boston'
 
     for index,team in teams.iterrows():
         baseURL = 'http://espn.go.com/nba/team/schedule/_/name/{0}'
@@ -24,14 +24,15 @@ def getFutureGames():
             try:
                 columns = row.find_all('td')
                 _home = True if columns[1].li.text == 'vs' else False
-                _other_team = columns[1].find_all('a')[1].text
+                _other_team = columns[1].find_all('a')[1]['href'].split('/')[-1]
+                _other_team = string.replace(str(_other_team),'-',' ').lower()
                 d = datetime.strptime(columns[0].text,'%a, %b %d')
+                d = d.date()
                 if d.month<8:
                     d = d.replace(2015)
                 else:
                     d = d.replace(2014)
-                now = datetime.now()
-                if d > now:
+                if d >= date.today():
                     dates.append(d)
                     home_team.append(_team if _home else _other_team)
                     visit_team.append(_team if not _home else _other_team)
