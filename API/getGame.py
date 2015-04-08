@@ -3,22 +3,25 @@ from datetime import date, timedelta
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-import src.checkData
 
-yesterday = date.today() - timedelta(days=1)
+pd.set_option('display.height', 1000)
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+pd.set_option('max_rows',200, 'max_column',210)
 
-def getYesterdayGame(games):
+def getGame(onDate):
     dates = []
     home_team = []
     home_team_score = []
     visit_team = []
     visit_team_score = []
     score_diff = []
-
-    url = "http://www.nba.com/gameline/"+str(yesterday).translate(None,'-')
+    #print onDate
+    url = "http://www.nba.com/gameline/"+str(onDate).translate(None,'-')
     r = requests.get(url)
     for div_top in BeautifulSoup(r.text).find_all('div',class_ = 'nbaModTopScore'):
-        dates.append(yesterday)
+        dates.append(onDate)
         divHomeTeam = div_top.find('div', class_='nbaModTopTeamHm')
         divAwayTeam = div_top.find('div',class_='nbaModTopTeamAw')
         visit_team.append(str(divAwayTeam.img['title']).lower())
@@ -35,14 +38,17 @@ def getYesterdayGame(games):
         except Exception:
             _home_score = divHomeTeam.find('div',class_='nbaModTopTeamNum').text
             home_team_score.append(_home_score)
-        score_diff.append(int(_home_score)-int(_visit_score))
-    dic = {'Date':dates,  'home_team':home_team,
-           'visit_team':visit_team, 'home_score': home_team_score,
-           'visit_score':visit_team_score,'score diff':score_diff
-            }
-    games = games.append(pd.DataFrame(dic)).drop_duplicates()
-    games.to_pickle(r"c:/django projects/nbaScraping/data/games")
-    print 'Yesterday Games Added'
-    return games
+        try:
+            score_diff.append(int(_home_score)-int(_visit_score))
+        except Exception:
+            pass
+    if onDate < date.today():
+        dic = {'1D':dates,  '2HT':home_team,
+               '3VT':visit_team, '4HS': home_team_score,
+               '5VS':visit_team_score,'6SD':score_diff
+              }
+    elif onDate >= date.today():
+        dic = {'1D':dates,  '2HT':home_team,
+               '3VT':visit_team}
 
-
+    return pd.DataFrame(dic).drop_duplicates()
