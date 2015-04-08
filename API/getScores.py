@@ -4,12 +4,13 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import datetime, date
 
-teamURL = "http://espn.go.com/nba/teams"
-teamHTML = requests.get(teamURL)
-teamSoup = BeautifulSoup(teamHTML.text)
-teamTable = teamSoup.find_all('ul', class_ = 'medium-logos')
+
 
 def getTeam():
+    teamURL = "http://espn.go.com/nba/teams"
+    teamHTML = requests.get(teamURL)
+    teamSoup = BeautifulSoup(teamHTML.text)
+    teamTable = teamSoup.find_all('ul', class_ = 'medium-logos')
     team = []
     teamPre = []
     for table in teamTable:
@@ -81,7 +82,7 @@ def getScores():
             except (AttributeError, IndexError, ValueError) as e:
                 pass
 
-    dic = {'id': match_id,'Date':dates,  'home_team':home_team,
+    dic = {'Date':dates,  'home_team':home_team,
                'visit_team':visit_team, 'home_score': home_team_score,
             'visit_score':visit_team_score,'score diff':score_diff
             }
@@ -91,14 +92,12 @@ def getScores():
 
 def saveScores():
     print 'Saving games to file'
-    print games.dtypes
     games.to_pickle(r"c:/django projects/nbaScraping/data/games")
 
 def __main__():
-    pass
-    #getTeam()
-    #getScores()
-    #saveScores()
+    getTeam()
+    getScores()
+    saveScores()
 
 if __name__ == '__main__':
     __main__()

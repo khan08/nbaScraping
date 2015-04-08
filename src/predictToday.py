@@ -1,8 +1,22 @@
 __author__ = 'Kang'
 from datetime import date, timedelta
+from API.addYesterdayGames import addYesterdayGame, yesterday
 from checkData import games, futureGames
 from API.getScores import getTeam
 import pandas as pd
+
+pd.set_option('display.height', 1000)
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+pd.set_option('max_rows',200, 'max_column',210)
+
+f=open('output.txt','w')
+games = addYesterdayGame(games)
+f.write('check yesterday games correctly loaded\n')
+f.write('-'*100+'\n')
+f.write(str(games.loc[games['Date']==yesterday])+'\n')
+f.write('-'*100+'\n')
 
 def getTodayGame():
     global todayGames
@@ -22,7 +36,10 @@ def getPowerIndex():
         powerTableAway['score diff'] = -powerTableAway['score diff']
         powerTable = powerTableHome.append(powerTableAway)
         powerTable = powerTable.sort(['Date'],ascending = 1)[-10:]
-
+        f.write('\n'+str(team['Teams'])+'\n')
+        f.write('-'*100+'\n')
+        f.write(str(powerTable)+'\n')
+        f.write('-'*100+'\n')
         #print team['Teams']
         #print powerTableHome[['Date','home_team','visit_team','score diff']]
         #print powerTableAway[['Date','home_team','visit_team','score diff']]
@@ -33,6 +50,10 @@ def getPowerIndex():
     powerDict={'Name':teamName,'Power': teamPower}
     global powerChart
     powerChart = pd.DataFrame(powerDict).sort(['Power'],ascending = 0)
+    f.write('Power Chart'+'\n')
+    f.write('-'*100+'\n')
+    f.write('\n'+str(powerChart)+'\n')
+    f.write('*'*100+'\n')
 
 def predictToday():
     prediction = []
@@ -51,9 +72,9 @@ def predictToday():
             confidence.append(-row['Home Team Power']+row['Visit Team Power'])
     predict['PREDICTION']=prediction
     predict['CONFIDENCE']=confidence
-    print
-    print date.today()
-    print predict[['Home Team','Visit Team','PREDICTION','CONFIDENCE']]
+    f.write(str(date.today())+'\n')
+    f.write('*'*100+'\n')
+    f.write(str(predict[['Home Team','Visit Team','PREDICTION','CONFIDENCE']]))
 
 
 def __main__():
