@@ -1,0 +1,511 @@
+check yesterday games correctly loaded
+----------------------------------------------------------------------------------------------------
+            Date home_score              home_team  score diff visit_score              visit_team
+463   2015-04-07        103   new orleans pelicans           3         100   golden state warriors
+542   2015-04-07        105   los angeles clippers           5         100      los angeles lakers
+697   2015-04-07         96          atlanta hawks          27          69            phoenix suns
+774   2015-04-07        116       sacramento kings           5         111  minnesota timberwolves
+1545  2015-04-07         88  oklahoma city thunder         -25         113       san antonio spurs
+1699  2015-04-07        105             miami heat           5         100       charlotte hornets
+----------------------------------------------------------------------------------------------------
+
+boston celtics
+----------------------------------------------------------------------------------------------------
+          Date home_score          home_team  score diff visit_score            visit_team
+67  2015-03-20        101  san antonio spurs         -12          89        boston celtics
+68  2015-03-22         97     boston celtics          -8         105       detroit pistons
+69  2015-03-23         91      brooklyn nets          19         110        boston celtics
+70  2015-03-25         86     boston celtics          -7          93            miami heat
+71  2015-03-27         92    new york knicks           4          96        boston celtics
+72  2015-03-29        106     boston celtics         -13         119  los angeles clippers
+73  2015-03-30        104  charlotte hornets          12         116        boston celtics
+74  2015-04-01        100     boston celtics          13          87        indiana pacers
+75  2015-04-03        101     boston celtics          -9         110       milwaukee bucks
+76  2015-04-04        116    toronto raptors           1         117        boston celtics
+----------------------------------------------------------------------------------------------------
+
+brooklyn nets
+----------------------------------------------------------------------------------------------------
+           Date home_score          home_team  score diff visit_score              visit_team
+144  2015-03-21        111     indiana pacers          12         123           brooklyn nets
+69   2015-03-23         91      brooklyn nets         -19         110          boston celtics
+146  2015-03-25         88  charlotte hornets           3          91           brooklyn nets
+147  2015-03-27        106      brooklyn nets           8          98     cleveland cavaliers
+148  2015-03-29        107      brooklyn nets           8          99      los angeles lakers
+149  2015-03-31        111      brooklyn nets           5         106          indiana pacers
+150  2015-04-01         98    new york knicks           2         100           brooklyn nets
+151  2015-04-03        114      brooklyn nets           5         109         toronto raptors
+152  2015-04-04        131      atlanta hawks         -32          99           brooklyn nets
+153  2015-04-06        106      brooklyn nets          10          96  portland trail blazers
+----------------------------------------------------------------------------------------------------
+
+new york knicks
+----------------------------------------------------------------------------------------------------
+           Date home_score           home_team  score diff visit_score              visit_team
+221  2015-03-19         92     new york knicks          -3          95  minnesota timberwolves
+222  2015-03-20         97  philadelphia 76ers         -16          81         new york knicks
+223  2015-03-22        106     toronto raptors         -17          89         new york knicks
+224  2015-03-23         82     new york knicks         -21         103       memphis grizzlies
+225  2015-03-25         80     new york knicks         -31         111    los angeles clippers
+71   2015-03-27         92     new york knicks          -4          96          boston celtics
+227  2015-03-28        111       chicago bulls         -31          80         new york knicks
+150  2015-04-01         98     new york knicks          -2         100           brooklyn nets
+229  2015-04-03        101  washington wizards         -14          87         new york knicks
+230  2015-04-05        101     new york knicks          10          91      philadelphia 76ers
+----------------------------------------------------------------------------------------------------
+
+philadelphia 76ers
+----------------------------------------------------------------------------------------------------
+           Date home_score            home_team  score diff visit_score            visit_team
+222  2015-03-20         97   philadelphia 76ers          16          81       new york knicks
+300  2015-03-22        101   los angeles lakers         -14          87    philadelphia 76ers
+301  2015-03-24        107     sacramento kings          -1         106    philadelphia 76ers
+302  2015-03-25         85       denver nuggets          14          99    philadelphia 76ers
+303  2015-03-27         98   philadelphia 76ers         -21         119  los angeles clippers
+304  2015-03-29         87  cleveland cavaliers          -1          86    philadelphia 76ers
+305  2015-03-30        111   philadelphia 76ers          -2         113    los angeles lakers
+306  2015-04-01        106   washington wizards         -13          93    philadelphia 76ers
+307  2015-04-04         92    charlotte hornets          -1          91    philadelphia 76ers
+230  2015-04-05        101      new york knicks         -10          91    philadelphia 76ers
+----------------------------------------------------------------------------------------------------
+
+toronto raptors
+----------------------------------------------------------------------------------------------------
+           Date home_score               home_team  score diff visit_score              visit_team
+376  2015-03-18        105         toronto raptors           5         100  minnesota timberwolves
+377  2015-03-20        108           chicago bulls         -16          92         toronto raptors
+223  2015-03-22        106         toronto raptors          17          89         new york knicks
+379  2015-03-24        108         detroit pistons          -4         104         toronto raptors
+380  2015-03-25        103         toronto raptors         -13         116           chicago bulls
+381  2015-03-27         94         toronto raptors          11          83      los angeles lakers
+382  2015-03-30         99         toronto raptors           3          96         houston rockets
+383  2015-04-01         99  minnesota timberwolves          14         113         toronto raptors
+151  2015-04-03        114           brooklyn nets          -5         109         toronto raptors
+76   2015-04-04        116         toronto raptors          -1         117          boston celtics
+----------------------------------------------------------------------------------------------------
+
+golden state warriors
+----------------------------------------------------------------------------------------------------
+           Date home_score               home_team  score diff visit_score             visit_team
+454  2015-03-21        106   golden state warriors          15          91              utah jazz
+455  2015-03-23        107   golden state warriors          31          76     washington wizards
+456  2015-03-24        108  portland trail blazers          14         122  golden state warriors
+457  2015-03-27         84       memphis grizzlies          23         107  golden state warriors
+458  2015-03-28         95         milwaukee bucks          13         108  golden state warriors
+459  2015-03-31        106    los angeles clippers           4         110  golden state warriors
+460  2015-04-02        107   golden state warriors           1         106           phoenix suns
+461  2015-04-04        110        dallas mavericks          13         123  golden state warriors
+462  2015-04-05        107       san antonio spurs         -15          92  golden state warriors
+463  2015-04-07        103    new orleans pelicans          -3         100  golden state warriors
+----------------------------------------------------------------------------------------------------
+
+los angeles clippers
+----------------------------------------------------------------------------------------------------
+           Date home_score               home_team  score diff visit_score             visit_team
+533  2015-03-20        113    los angeles clippers          14          99     washington wizards
+534  2015-03-22        107    los angeles clippers           7         100   new orleans pelicans
+225  2015-03-25         80         new york knicks          31         111   los angeles clippers
+303  2015-03-27         98      philadelphia 76ers          21         119   los angeles clippers
+72   2015-03-29        106          boston celtics          13         119   los angeles clippers
+459  2015-03-31        106    los angeles clippers          -4         110  golden state warriors
+539  2015-04-01        122  portland trail blazers           4         126   los angeles clippers
+540  2015-04-04         92          denver nuggets          15         107   los angeles clippers
+541  2015-04-05         78      los angeles lakers          28         106   los angeles clippers
+542  2015-04-07        105    los angeles clippers           5         100     los angeles lakers
+----------------------------------------------------------------------------------------------------
+
+los angeles lakers
+----------------------------------------------------------------------------------------------------
+           Date home_score               home_team  score diff visit_score              visit_team
+300  2015-03-22        101      los angeles lakers          14          87      philadelphia 76ers
+611  2015-03-24        127   oklahoma city thunder         -10         117      los angeles lakers
+612  2015-03-25         99  minnesota timberwolves           2         101      los angeles lakers
+381  2015-03-27         94         toronto raptors         -11          83      los angeles lakers
+148  2015-03-29        107           brooklyn nets          -8          99      los angeles lakers
+305  2015-03-30        111      philadelphia 76ers           2         113      los angeles lakers
+616  2015-04-01         92      los angeles lakers         -21         113    new orleans pelicans
+617  2015-04-03         77      los angeles lakers         -30         107  portland trail blazers
+541  2015-04-05         78      los angeles lakers         -28         106    los angeles clippers
+542  2015-04-07        105    los angeles clippers          -5         100      los angeles lakers
+----------------------------------------------------------------------------------------------------
+
+phoenix suns
+----------------------------------------------------------------------------------------------------
+           Date home_score               home_team  score diff visit_score              visit_team
+688  2015-03-19         74            phoenix suns           2          72    new orleans pelicans
+689  2015-03-21        102         houston rockets          15         117            phoenix suns
+690  2015-03-22         98            phoenix suns           6          92        dallas mavericks
+691  2015-03-25         99            phoenix suns          -9         108        sacramento kings
+692  2015-03-27         81            phoenix suns          -6          87  portland trail blazers
+693  2015-03-29         97            phoenix suns         -12         109   oklahoma city thunder
+694  2015-03-30        109  portland trail blazers         -23          86            phoenix suns
+460  2015-04-02        107   golden state warriors          -1         106            phoenix suns
+696  2015-04-04         87            phoenix suns           2          85               utah jazz
+697  2015-04-07         96           atlanta hawks         -27          69            phoenix suns
+----------------------------------------------------------------------------------------------------
+
+sacramento kings
+----------------------------------------------------------------------------------------------------
+           Date home_score             home_team  score diff visit_score              visit_team
+765  2015-03-20        101      sacramento kings          10          91       charlotte hornets
+766  2015-03-22        109      sacramento kings          23          86      washington wizards
+301  2015-03-24        107      sacramento kings           1         106      philadelphia 76ers
+691  2015-03-25         99          phoenix suns           9         108        sacramento kings
+769  2015-03-27        102  new orleans pelicans         -14          88        sacramento kings
+770  2015-03-30         97     memphis grizzlies         -14          83        sacramento kings
+771  2015-04-01        115       houston rockets          -4         111        sacramento kings
+772  2015-04-03         95      sacramento kings          -6         101    new orleans pelicans
+773  2015-04-05         95      sacramento kings          -6         101               utah jazz
+774  2015-04-07        116      sacramento kings           5         111  minnesota timberwolves
+----------------------------------------------------------------------------------------------------
+
+chicago bulls
+----------------------------------------------------------------------------------------------------
+           Date home_score              home_team  score diff visit_score         visit_team
+842  2015-03-15        109  oklahoma city thunder          -9         100      chicago bulls
+843  2015-03-18        103          chicago bulls          17          86     indiana pacers
+377  2015-03-20        108          chicago bulls          16          92    toronto raptors
+845  2015-03-21        107        detroit pistons         -16          91      chicago bulls
+846  2015-03-23         98          chicago bulls          12          86  charlotte hornets
+380  2015-03-25        103        toronto raptors          13         116      chicago bulls
+227  2015-03-28        111          chicago bulls          31          80    new york knicks
+849  2015-04-01         95        milwaukee bucks          -4          91      chicago bulls
+850  2015-04-03         88          chicago bulls           6          82    detroit pistons
+851  2015-04-05         99    cleveland cavaliers          -5          94      chicago bulls
+----------------------------------------------------------------------------------------------------
+
+cleveland cavaliers
+----------------------------------------------------------------------------------------------------
+           Date home_score            home_team  score diff visit_score           visit_team
+919  2015-03-15        108        orlando magic          15         123  cleveland cavaliers
+920  2015-03-16        106           miami heat         -14          92  cleveland cavaliers
+142  2015-03-18        117  cleveland cavaliers          25          92        brooklyn nets
+922  2015-03-20         95  cleveland cavaliers           3          92       indiana pacers
+923  2015-03-22         90      milwaukee bucks          18         108  cleveland cavaliers
+924  2015-03-25         89    memphis grizzlies          22         111  cleveland cavaliers
+147  2015-03-27        106        brooklyn nets          -8          98  cleveland cavaliers
+304  2015-03-29         87  cleveland cavaliers           1          86   philadelphia 76ers
+927  2015-04-02        114  cleveland cavaliers          26          88           miami heat
+851  2015-04-05         99  cleveland cavaliers           5          94        chicago bulls
+----------------------------------------------------------------------------------------------------
+
+detroit pistons
+----------------------------------------------------------------------------------------------------
+            Date home_score           home_team  score diff visit_score       visit_team
+298   2015-03-18         94  philadelphia 76ers         -11          83  detroit pistons
+845   2015-03-21        107     detroit pistons          16          91    chicago bulls
+68    2015-03-22         97      boston celtics           8         105  detroit pistons
+379   2015-03-24        108     detroit pistons           4         104  toronto raptors
+1000  2015-03-27         97       orlando magic          14         111  detroit pistons
+1001  2015-03-29        109          miami heat          -7         102  detroit pistons
+1002  2015-03-31        105     detroit pistons          10          95    atlanta hawks
+1003  2015-04-01        102   charlotte hornets         -24          78  detroit pistons
+850   2015-04-03         88       chicago bulls          -6          82  detroit pistons
+1005  2015-04-04         99     detroit pistons           1          98       miami heat
+----------------------------------------------------------------------------------------------------
+
+indiana pacers
+----------------------------------------------------------------------------------------------------
+            Date home_score            home_team  score diff visit_score         visit_team
+922   2015-03-20         95  cleveland cavaliers          -3          92     indiana pacers
+144   2015-03-21        111       indiana pacers         -12         123      brooklyn nets
+1075  2015-03-23        100       indiana pacers         -10         110    houston rockets
+1076  2015-03-25        101   washington wizards           2         103     indiana pacers
+1077  2015-03-26        111      milwaukee bucks          -4         107     indiana pacers
+1078  2015-03-29        104       indiana pacers           5          99   dallas mavericks
+149   2015-03-31        111        brooklyn nets          -5         106     indiana pacers
+74    2015-04-01        100       boston celtics         -13          87     indiana pacers
+1081  2015-04-03         93       indiana pacers          19          74  charlotte hornets
+1082  2015-04-05        112       indiana pacers          23          89         miami heat
+----------------------------------------------------------------------------------------------------
+
+milwaukee bucks
+----------------------------------------------------------------------------------------------------
+            Date home_score        home_team  score diff visit_score             visit_team
+1150  2015-03-18        103  milwaukee bucks         -11         114      san antonio spurs
+143   2015-03-20        129    brooklyn nets          -2         127        milwaukee bucks
+923   2015-03-22         90  milwaukee bucks         -18         108    cleveland cavaliers
+1153  2015-03-24         89  milwaukee bucks           1          88             miami heat
+1077  2015-03-26        111  milwaukee bucks           4         107         indiana pacers
+458   2015-03-28         95  milwaukee bucks         -13         108  golden state warriors
+1156  2015-03-30        101    atlanta hawks         -13          88        milwaukee bucks
+849   2015-04-01         95  milwaukee bucks           4          91          chicago bulls
+75    2015-04-03        101   boston celtics           9         110        milwaukee bucks
+1159  2015-04-04         90  milwaukee bucks          -7          97          orlando magic
+----------------------------------------------------------------------------------------------------
+
+dallas mavericks
+----------------------------------------------------------------------------------------------------
+            Date home_score              home_team  score diff visit_score             visit_team
+1227  2015-03-16        119       dallas mavericks           4         115  oklahoma city thunder
+1228  2015-03-18        107       dallas mavericks           5         102          orlando magic
+1229  2015-03-20        101       dallas mavericks         -11         112      memphis grizzlies
+690   2015-03-22         98           phoenix suns          -6          92       dallas mavericks
+1231  2015-03-24        101       dallas mavericks           7          94      san antonio spurs
+1232  2015-03-27         94      san antonio spurs         -18          76       dallas mavericks
+1078  2015-03-29        104         indiana pacers          -5          99       dallas mavericks
+1234  2015-04-01        131  oklahoma city thunder           4         135       dallas mavericks
+1235  2015-04-02        101       dallas mavericks          -7         108        houston rockets
+461   2015-04-04        110       dallas mavericks         -13         123  golden state warriors
+----------------------------------------------------------------------------------------------------
+
+houston rockets
+----------------------------------------------------------------------------------------------------
+            Date home_score              home_team  score diff visit_score              visit_team
+1304  2015-03-19        118        houston rockets          10         108          denver nuggets
+689   2015-03-21        102        houston rockets         -15         117            phoenix suns
+1075  2015-03-23        100         indiana pacers          10         110         houston rockets
+1307  2015-03-25         93   new orleans pelicans           2          95         houston rockets
+1308  2015-03-27        120        houston rockets          10         110  minnesota timberwolves
+1309  2015-03-29         91     washington wizards           8          99         houston rockets
+382   2015-03-30         99        toronto raptors          -3          96         houston rockets
+771   2015-04-01        115        houston rockets           4         111        sacramento kings
+1235  2015-04-02        101       dallas mavericks           7         108         houston rockets
+1313  2015-04-05        112  oklahoma city thunder           3         115         houston rockets
+----------------------------------------------------------------------------------------------------
+
+memphis grizzlies
+----------------------------------------------------------------------------------------------------
+            Date home_score          home_team  score diff visit_score              visit_team
+995   2015-03-17        105    detroit pistons         -10          95       memphis grizzlies
+1229  2015-03-20        101   dallas mavericks          11         112       memphis grizzlies
+1383  2015-03-21         97  memphis grizzlies          11          86  portland trail blazers
+224   2015-03-23         82    new york knicks          21         103       memphis grizzlies
+924   2015-03-25         89  memphis grizzlies         -22         111     cleveland cavaliers
+457   2015-03-27         84  memphis grizzlies         -23         107   golden state warriors
+1387  2015-03-29        103  san antonio spurs         -14          89       memphis grizzlies
+770   2015-03-30         97  memphis grizzlies          14          83        sacramento kings
+1389  2015-04-03        100  memphis grizzlies           8          92   oklahoma city thunder
+1390  2015-04-04         83  memphis grizzlies          -9          92      washington wizards
+----------------------------------------------------------------------------------------------------
+
+new orleans pelicans
+----------------------------------------------------------------------------------------------------
+            Date home_score               home_team  score diff visit_score              visit_team
+688   2015-03-19         74            phoenix suns          -2          72    new orleans pelicans
+453   2015-03-20        112   golden state warriors         -16          96    new orleans pelicans
+534   2015-03-22        107    los angeles clippers          -7         100    new orleans pelicans
+1307  2015-03-25         93    new orleans pelicans          -2          95         houston rockets
+769   2015-03-27        102    new orleans pelicans          14          88        sacramento kings
+1463  2015-03-29        110    new orleans pelicans          22          88  minnesota timberwolves
+616   2015-04-01         92      los angeles lakers          21         113    new orleans pelicans
+772   2015-04-03         95        sacramento kings           6         101    new orleans pelicans
+1466  2015-04-04         99  portland trail blazers          -9          90    new orleans pelicans
+463   2015-04-07        103    new orleans pelicans           3         100   golden state warriors
+----------------------------------------------------------------------------------------------------
+
+san antonio spurs
+----------------------------------------------------------------------------------------------------
+            Date home_score              home_team  score diff visit_score             visit_team
+1536  2015-03-22         95          atlanta hawks          19         114      san antonio spurs
+1231  2015-03-24        101       dallas mavericks          -7          94      san antonio spurs
+1538  2015-03-25        130      san antonio spurs          39          91  oklahoma city thunder
+1232  2015-03-27         94      san antonio spurs          18          76       dallas mavericks
+1387  2015-03-29        103      san antonio spurs          14          89      memphis grizzlies
+1541  2015-03-31         81             miami heat          14          95      san antonio spurs
+1542  2015-04-01         91          orlando magic          12         103      san antonio spurs
+1543  2015-04-03        123      san antonio spurs          30          93         denver nuggets
+462   2015-04-05        107      san antonio spurs          15          92  golden state warriors
+1545  2015-04-07         88  oklahoma city thunder          25         113      san antonio spurs
+----------------------------------------------------------------------------------------------------
+
+atlanta hawks
+----------------------------------------------------------------------------------------------------
+            Date home_score              home_team  score diff visit_score         visit_team
+452   2015-03-18        114  golden state warriors         -19          95      atlanta hawks
+1614  2015-03-20        123  oklahoma city thunder          -8         115      atlanta hawks
+1536  2015-03-22         95          atlanta hawks         -19         114  san antonio spurs
+1616  2015-03-25         83          orlando magic          12          95      atlanta hawks
+1617  2015-03-27         99          atlanta hawks          13          86         miami heat
+1618  2015-03-28        115      charlotte hornets         -15         100      atlanta hawks
+1156  2015-03-30        101          atlanta hawks          13          88    milwaukee bucks
+1002  2015-03-31        105        detroit pistons         -10          95      atlanta hawks
+152   2015-04-04        131          atlanta hawks          32          99      brooklyn nets
+697   2015-04-07         96          atlanta hawks          27          69       phoenix suns
+----------------------------------------------------------------------------------------------------
+
+charlotte hornets
+----------------------------------------------------------------------------------------------------
+            Date home_score               home_team  score diff visit_score          visit_team
+1690  2015-03-22         98  minnesota timberwolves          11         109   charlotte hornets
+846   2015-03-23         98           chicago bulls         -12          86   charlotte hornets
+146   2015-03-25         88       charlotte hornets          -3          91       brooklyn nets
+1693  2015-03-27        110      washington wizards          -3         107   charlotte hornets
+1618  2015-03-28        115       charlotte hornets          15         100       atlanta hawks
+73    2015-03-30        104       charlotte hornets         -12         116      boston celtics
+1003  2015-04-01        102       charlotte hornets          24          78     detroit pistons
+1081  2015-04-03         93          indiana pacers         -19          74   charlotte hornets
+307   2015-04-04         92       charlotte hornets           1          91  philadelphia 76ers
+1699  2015-04-07        105              miami heat          -5         100   charlotte hornets
+----------------------------------------------------------------------------------------------------
+
+miami heat
+----------------------------------------------------------------------------------------------------
+            Date home_score              home_team  score diff visit_score         visit_team
+1768  2015-03-22         93  oklahoma city thunder         -18          75         miami heat
+1153  2015-03-24         89        milwaukee bucks          -1          88         miami heat
+70    2015-03-25         86         boston celtics           7          93         miami heat
+1617  2015-03-27         99          atlanta hawks         -13          86         miami heat
+1001  2015-03-29        109             miami heat           7         102    detroit pistons
+1541  2015-03-31         81             miami heat         -14          95  san antonio spurs
+927   2015-04-02        114    cleveland cavaliers         -26          88         miami heat
+1005  2015-04-04         99        detroit pistons          -1          98         miami heat
+1082  2015-04-05        112         indiana pacers         -23          89         miami heat
+1699  2015-04-07        105             miami heat           5         100  charlotte hornets
+----------------------------------------------------------------------------------------------------
+
+orlando magic
+----------------------------------------------------------------------------------------------------
+            Date home_score               home_team  score diff visit_score              visit_team
+919   2015-03-15        108           orlando magic         -15         123     cleveland cavaliers
+1303  2015-03-17        107         houston rockets         -13          94           orlando magic
+1228  2015-03-18        107        dallas mavericks          -5         102           orlando magic
+1848  2015-03-20        111           orlando magic           7         104  portland trail blazers
+1849  2015-03-22        100           orlando magic         -19         119          denver nuggets
+1616  2015-03-25         83           orlando magic         -12          95           atlanta hawks
+1000  2015-03-27         97           orlando magic         -14         111         detroit pistons
+1542  2015-04-01         91           orlando magic         -12         103       san antonio spurs
+1853  2015-04-03         84  minnesota timberwolves          13          97           orlando magic
+1159  2015-04-04         90         milwaukee bucks           7          97           orlando magic
+----------------------------------------------------------------------------------------------------
+
+washington wizards
+----------------------------------------------------------------------------------------------------
+            Date home_score              home_team  score diff visit_score          visit_team
+1922  2015-03-18         84              utah jazz           4          88  washington wizards
+533   2015-03-20        113   los angeles clippers         -14          99  washington wizards
+766   2015-03-22        109       sacramento kings         -23          86  washington wizards
+455   2015-03-23        107  golden state warriors         -31          76  washington wizards
+1076  2015-03-25        101     washington wizards          -2         103      indiana pacers
+1693  2015-03-27        110     washington wizards           3         107   charlotte hornets
+1309  2015-03-29         91     washington wizards          -8          99     houston rockets
+306   2015-04-01        106     washington wizards          13          93  philadelphia 76ers
+229   2015-04-03        101     washington wizards          14          87     new york knicks
+1390  2015-04-04         83      memphis grizzlies           9          92  washington wizards
+----------------------------------------------------------------------------------------------------
+
+denver nuggets
+----------------------------------------------------------------------------------------------------
+            Date home_score               home_team  score diff visit_score            visit_team
+1380  2015-03-16         92       memphis grizzlies         -11          81        denver nuggets
+1304  2015-03-19        118         houston rockets         -10         108        denver nuggets
+1767  2015-03-20        108              miami heat         -17          91        denver nuggets
+1849  2015-03-22        100           orlando magic          19         119        denver nuggets
+302   2015-03-25         85          denver nuggets         -14          99    philadelphia 76ers
+2004  2015-03-27        107          denver nuggets          16          91             utah jazz
+2005  2015-03-28        120  portland trail blazers          -6         114        denver nuggets
+2006  2015-04-01         98               utah jazz         -14          84        denver nuggets
+1543  2015-04-03        123       san antonio spurs         -30          93        denver nuggets
+540   2015-04-04         92          denver nuggets         -15         107  los angeles clippers
+----------------------------------------------------------------------------------------------------
+
+minnesota timberwolves
+----------------------------------------------------------------------------------------------------
+            Date home_score               home_team  score diff visit_score              visit_team
+221   2015-03-19         92         new york knicks           3          95  minnesota timberwolves
+1690  2015-03-22         98  minnesota timberwolves         -11         109       charlotte hornets
+2078  2015-03-23        104               utah jazz           2         106  minnesota timberwolves
+612   2015-03-25         99  minnesota timberwolves          -2         101      los angeles lakers
+1308  2015-03-27        120         houston rockets         -10         110  minnesota timberwolves
+1463  2015-03-29        110    new orleans pelicans         -22          88  minnesota timberwolves
+2082  2015-03-30         84  minnesota timberwolves         -20         104               utah jazz
+383   2015-04-01         99  minnesota timberwolves         -14         113         toronto raptors
+1853  2015-04-03         84  minnesota timberwolves         -13          97           orlando magic
+774   2015-04-07        116        sacramento kings          -5         111  minnesota timberwolves
+----------------------------------------------------------------------------------------------------
+
+oklahoma city thunder
+----------------------------------------------------------------------------------------------------
+            Date home_score              home_team  score diff visit_score             visit_team
+1614  2015-03-20        123  oklahoma city thunder           8         115          atlanta hawks
+1768  2015-03-22         93  oklahoma city thunder          18          75             miami heat
+611   2015-03-24        127  oklahoma city thunder          10         117     los angeles lakers
+1538  2015-03-25        130      san antonio spurs         -39          91  oklahoma city thunder
+2158  2015-03-28         94              utah jazz          -5          89  oklahoma city thunder
+693   2015-03-29         97           phoenix suns          12         109  oklahoma city thunder
+1234  2015-04-01        131  oklahoma city thunder          -4         135       dallas mavericks
+1389  2015-04-03        100      memphis grizzlies          -8          92  oklahoma city thunder
+1313  2015-04-05        112  oklahoma city thunder          -3         115        houston rockets
+1545  2015-04-07         88  oklahoma city thunder         -25         113      san antonio spurs
+----------------------------------------------------------------------------------------------------
+
+portland trail blazers
+----------------------------------------------------------------------------------------------------
+            Date home_score               home_team  score diff visit_score              visit_team
+1383  2015-03-21         97       memphis grizzlies         -11          86  portland trail blazers
+456   2015-03-24        108  portland trail blazers         -14         122   golden state warriors
+2233  2015-03-25         89               utah jazz           3          92  portland trail blazers
+692   2015-03-27         81            phoenix suns           6          87  portland trail blazers
+2005  2015-03-28        120  portland trail blazers           6         114          denver nuggets
+694   2015-03-30        109  portland trail blazers          23          86            phoenix suns
+539   2015-04-01        122  portland trail blazers          -4         126    los angeles clippers
+617   2015-04-03         77      los angeles lakers          30         107  portland trail blazers
+1466  2015-04-04         99  portland trail blazers           9          90    new orleans pelicans
+153   2015-04-06        106           brooklyn nets         -10          96  portland trail blazers
+----------------------------------------------------------------------------------------------------
+
+utah jazz
+----------------------------------------------------------------------------------------------------
+            Date home_score               home_team  score diff visit_score              visit_team
+609   2015-03-19         73      los angeles lakers           7          80               utah jazz
+454   2015-03-21        106   golden state warriors         -15          91               utah jazz
+2078  2015-03-23        104               utah jazz          -2         106  minnesota timberwolves
+2233  2015-03-25         89               utah jazz          -3          92  portland trail blazers
+2004  2015-03-27        107          denver nuggets         -16          91               utah jazz
+2158  2015-03-28         94               utah jazz           5          89   oklahoma city thunder
+2082  2015-03-30         84  minnesota timberwolves          20         104               utah jazz
+2006  2015-04-01         98               utah jazz          14          84          denver nuggets
+696   2015-04-04         87            phoenix suns          -2          85               utah jazz
+773   2015-04-05         95        sacramento kings           6         101               utah jazz
+----------------------------------------------------------------------------------------------------
+Power Chart
+----------------------------------------------------------------------------------------------------
+
+                      Name  Power
+19       san antonio spurs    179
+6     los angeles clippers    134
+5    golden state warriors     96
+11     cleveland cavaliers     93
+10           chicago bulls     61
+28  portland trail blazers     38
+16         houston rockets     36
+18    new orleans pelicans     30
+20           atlanta hawks     26
+29               utah jazz     14
+4          toronto raptors     11
+12         detroit pistons      5
+9         sacramento kings      4
+1            brooklyn nets      2
+13          indiana pacers      2
+0           boston celtics      0
+21       charlotte hornets     -3
+17       memphis grizzlies    -13
+3       philadelphia 76ers    -33
+24      washington wizards    -35
+27   oklahoma city thunder    -36
+15        dallas mavericks    -40
+14         milwaukee bucks    -46
+8             phoenix suns    -53
+23           orlando magic    -63
+22              miami heat    -77
+25          denver nuggets    -82
+26  minnesota timberwolves    -92
+7       los angeles lakers    -95
+2          new york knicks   -129
+****************************************************************************************************
+2015-04-08
+****************************************************************************************************
+                 Home Team              Visit Team PREDICTION  CONFIDENCE
+0          detroit pistons          boston celtics          W           5
+1            brooklyn nets           atlanta hawks          L          24
+2          new york knicks          indiana pacers          L         131
+3       philadelphia 76ers      washington wizards          W           2
+4        charlotte hornets         toronto raptors          L          14
+5           denver nuggets      los angeles lakers          W          13
+6         dallas mavericks            phoenix suns          W          13
+7                utah jazz        sacramento kings          W          10
+8            orlando magic           chicago bulls          L         124
+9          milwaukee bucks     cleveland cavaliers          L         139
+10       san antonio spurs         houston rockets          W         143
+11       memphis grizzlies    new orleans pelicans          L          43
+12  portland trail blazers  minnesota timberwolves          W         130
