@@ -7,7 +7,10 @@ addSingleDayGame(yesterday)
 from checkData import games
 import pandas as pd
 
-f=open('output.txt','w')
+todayFile = [r'c:\django projects\nbaScraping\bin/'+str(date.today())+'.txt',r'\django projects\nbaScraping\data/'
+             +str(date.today())]
+
+f=open(todayFile[0], 'w+')
 f.write('check yesterday games correctly loaded\n')
 f.write('-'*100+'\n')
 f.write(str(games.loc[games['1D']==yesterday])+'\n')
@@ -69,6 +72,7 @@ def predictToday():
     f.write(str(date.today())+'\n')
     f.write('*'*100+'\n')
     f.write(str(predict[['2HT','3VT','PREDICTION','CONFIDENCE']]))
+    predict.to_pickle(todayFile[1])
 
 
 def __main__():
