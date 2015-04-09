@@ -43,10 +43,13 @@ def getGame(onDate):
             score_diff.append(int(_home_score)-int(_visit_score))
         except Exception:
             pass
-        if int(_home_score) - int(_visit_score)>0:
-            result.append('W')
-        else:
-            result.append('L')
+        try:
+            if int(_home_score) - int(_visit_score)>0:
+                result.append('W')
+            else:
+                result.append('L')
+        except Exception:
+            pass
     if onDate < date.today():
         dic = {'1D':dates,  '2HT':home_team,
                '3VT':visit_team, '4HS': home_team_score,

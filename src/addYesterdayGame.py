@@ -5,3 +5,5 @@ from datetime import date,timedelta
 def addYesterday():
     yesterday = date.today()-timedelta(days=1)
     addSingleDayGame(yesterday)
+
+addYesterday()

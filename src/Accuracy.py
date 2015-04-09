@@ -9,11 +9,13 @@ pd.set_option('max_rows',200, 'max_column',210)
 def getScore(ruleNameFile):
     Rule = pd.read_pickle('/django projects/nbaScraping/data/'+ruleNameFile)
     print Rule
-    score = 0
+    score = 0.0
+    rows = 0.0
     for item,rule in Rule.iterrows():
+        rows = rows + 1
         if rule['7R']== rule['6P']:
             score = score+1
-    print score
+    print score/rows
 
 
 getScore('TenDayRule')
