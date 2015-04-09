@@ -16,6 +16,7 @@ def getGame(onDate):
     home_team_score = []
     visit_team = []
     visit_team_score = []
+    result = []
     score_diff = []
     #print onDate
     url = "http://www.nba.com/gameline/"+str(onDate).translate(None,'-')
@@ -42,10 +43,14 @@ def getGame(onDate):
             score_diff.append(int(_home_score)-int(_visit_score))
         except Exception:
             pass
+        if _home_score > _visit_score:
+            result.append('W')
+        else:
+            result.append('L')
     if onDate < date.today():
         dic = {'1D':dates,  '2HT':home_team,
                '3VT':visit_team, '4HS': home_team_score,
-               '5VS':visit_team_score,'6SD':score_diff
+               '5VS':visit_team_score,'6SD':score_diff, '7R':result
               }
     elif onDate >= date.today():
         dic = {'1D':dates,  '2HT':home_team,
