@@ -43,7 +43,7 @@ def getGame(onDate):
             score_diff.append(int(_home_score)-int(_visit_score))
         except Exception:
             pass
-        if _home_score > _visit_score:
+        if int(_home_score) - int(_visit_score)>0:
             result.append('W')
         else:
             result.append('L')
