@@ -1,82 +1,98 @@
 __author__ = 'Kang'
 from datetime import date, timedelta
-from checkData import loadGame
-from API.getGame import getGame
+from setupData import insertSingleDayGame
+import sqlite3
 import pandas as pd
-
-pd.set_option('display.max_rows', 500)
-pd.set_option('display.max_columns', 500)
-pd.set_option('display.width', 1000)
-pd.set_option('max_rows',200, 'max_column',210)
-
-games = loadGame()
+import pandas.io.sql as pd_sql
 
 def getPowerIndex(date):
+    db = sqlite3.connect(r'c:\django projects\nbaScraping\data\nba.db')
+    cursor = db.cursor()
+    cursor.execute('''SELECT name FROM Team''')
+    all_rows = cursor.fetchall()
     teamName = []
-    teamPower = []
-    teams = games['2HT'].unique()
-    for team in teams:
+    scoreDiff = []
+    for row in all_rows:
+        for team in row:
+            score_diff = 0
+        cursor.execute('''select * from Games where homeTeam = ?
+                        and date(gameDay) < ?
+                        union
+                        select * from Games
+                        where awayTeam = ?
+                        and date(gameDay) < ?
+                        order by gameDay desc
+                        limit 10''',(team,date,team,date))
+        powerTable = cursor.fetchall()
+        for power in powerTable:
+            score_diff = score_diff + power[5]
         teamName.append(team)
-        powerTableHome = games.loc[(games['2HT']==team) & (games['1D']<date)]
-        powerTableHome = powerTableHome.sort(['1D'],ascending = 1).drop_duplicates()[-20:]
-        powerTableAway = games.loc[(games['3VT']==team) & (games['1D']<date)]
-        powerTableAway = powerTableAway.sort(['1D'],ascending = 1).drop_duplicates()[-20:]
-        powerTableAway['6SD'] = -powerTableAway['6SD']
-        powerTable = powerTableHome.append(powerTableAway)
-        powerTable = powerTable.sort(['1D'],ascending = 1)[-10:]
-        #print team['Teams']
-        #print powerTableHome[['Date','home_team','visit_team','score diff']]
-        #print powerTableAway[['Date','home_team','visit_team','score diff']]
-        #print powerTable[['Date','home_team','visit_team','score diff']]
-        powerIndex = powerTable.sum(axis=0)['6SD']
-        #print '_'*15
-        teamPower.append(powerIndex)
-
-    powerDict={'Name':teamName,'Power': teamPower}
+        scoreDiff.append(score_diff)
+    powerDict={'Name':teamName,'Power': scoreDiff}
     return pd.DataFrame(powerDict).sort(['Power'],ascending = 0)
+    db.close()
 
 def predictADay(date):
+    db = sqlite3.connect(r'c:\django projects\nbaScraping\data\nba.db')
+    cursor = db.cursor()
     prediction = []
     confidence = []
+    isCorrect = []
     powerChart = getPowerIndex(date)
+    sql = 'SELECT * FROM Games where date(gameDay) = date(\'%s\') ' %date
     if date < date.today():
-        aDayGames = games.loc[(games['1D']==date)]
+        aDayGames = pd.read_sql(sql,db)
     elif date == date.today():
-        aDayGames = getGame(date.today())
-    predictHome = pd.merge(aDayGames, powerChart, left_on = '2HT', right_on = 'Name')
-    predictHome = predictHome.rename(columns={'Power':'4HTP'})
-    predict = pd.merge(predictHome, powerChart, left_on = '3VT', right_on = 'Name')
-    if date<date.today():
-        predict = predict.rename(columns={'Power':'5VTP'})[['1D','2HT','3VT','4HTP','5VTP','7R']]
-    else:
-        predict = predict.rename(columns={'Power':'5VTP'})[['1D','2HT','3VT','4HTP','5VTP']]
+        pass
+    predictHome = pd.merge(aDayGames, powerChart, left_on = 'homeTeam', right_on = 'Name')
+    predictHome = predictHome.rename(columns={'Power':'HTP'})
+    predict = pd.merge(predictHome, powerChart, left_on = 'awayTeam', right_on = 'Name')
+    predict = predict.rename(columns={'Power':'VTP'})
+
     for index,row in predict.iterrows():
-        if row['4HTP']>=row['5VTP']:
+        if row['HTP']>=row['VTP']:
             prediction.append('W')
-            confidence.append(row['4HTP']-row['5VTP'])
+            confidence.append(row['HTP']-row['VTP'])
         else:
             prediction.append('L')
-            confidence.append(-row['4HTP']+row['5VTP'])
+            confidence.append(-row['HTP']+row['VTP'])
+
     predict['6P']=prediction
     predict['7C']=confidence
+    predict = predict[['gameday','homeTeam','awayTeam','result','6P','7C']]
+    db.close()
     return predict
 
 #Ten Game Score Diff Rule
 def predictAll():
-    predictAllTable = pd.read_pickle(r'/django projects/nbaScraping/data/TenDayRule')
+    isCorrect = []
+    predictAllTable = pd.DataFrame()
     end_date = date.today() - timedelta(days=1)
-    start_date = date.today() - timedelta(days=1)
+    start_date = date(2014,11,15)
     day_count = (end_date - start_date).days + 1
     for n in range(day_count):
         onDate = start_date + timedelta(n)
         print onDate
         predictAllTable = predictAllTable.append(predictADay(onDate))
+    for item,row in predictAllTable.iterrows():
+        if row['result'] == row['6P']:
+            isCorrect.append(1)
+        else:
+            isCorrect.append(0)
+    predictAllTable['isCorrect'] = isCorrect
     return predictAllTable.drop_duplicates()
 
 def __main__():
+    pass
     #getGame(ondate)
-    #predictAll().to_pickle(r'/django projects/nbaScraping/data/TenDayRule')
-    print predictADay(date.today())
+    db = sqlite3.connect(r'c:\django projects\nbaScraping\data\nba.db')
+    TenGameRule = predictAll()
+    print TenGameRule
+    try:
+        TenGameRule.to_sql('TenGameRule',db,if_exists='append',index=False)
+        print 'inserted'
+    except Exception as e:
+        print 'failed',e.message
 
 
 
