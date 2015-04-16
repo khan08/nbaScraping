@@ -7,10 +7,10 @@ import sqlite3
 
 #default add yesterday games
 def setupAllFinishedGames():
-    db = sqlite3.connect(r'c:\django projects\nbaScraping\data\nba.db')
+    db = sqlite3.connect(r'c:\python data science\nbaScraping\data\nba.db')
     cursor = db.cursor()
     end_date = date.today() - timedelta(days=1)
-    start_date = date(2014,10,28)
+    start_date = date(2015,04,10)
     day_count = (end_date - start_date).days + 1
     for n in range(day_count):
         onDate = start_date + timedelta(n)
@@ -34,7 +34,7 @@ def insertSingleDayGame(onDate = date.today()-timedelta(days=1)):
     db.close()
 
 def __main__():
-    insertSingleDayGame()
+    setupAllFinishedGames()
 
 if __name__ == '__main__':
     __main__()

@@ -24,7 +24,7 @@ def getPowerIndex(date, db):
                             where awayTeam = ?
                             and date(gameDay) < ?
                             order by gameDay desc
-                            limit 20''',(team,date,team,date))
+                            ''',(team,date,team,date))
             games = cursor.fetchall()
             for game in games:
                 s = game[5]
@@ -38,14 +38,13 @@ def getPowerIndex(date, db):
     powerDict={'gameday':dates, 'Name':teamName,'Power': scoreDiff}
     return pd.DataFrame(powerDict).sort(['Power'],ascending = 0)
 
-def plotPowerChartTime(team,date,db):
-    sql = 'SELECT * FROM powerChart20 where date(gameDay) < date(\'%s\') and name = %r' %(date,team)
+def plotPowerChartTime(team,date,db,ax = None):
+    sql = 'SELECT * FROM powerChart where date(gameDay) < date(\'%s\') and name = %r' %(date,team)
     print sql
     powerChart = pd.read_sql(sql,db)
     print powerChart
     powerChart['gameday']=pd.to_datetime(powerChart['gameday'])
-    plot = powerChart.plot(x='gameday',y='Power',title=team)
-    plt.show()
+    return powerChart.plot(x='gameday',y='power',title=team, ax = ax)
     #print powerChart
 
 def predictADay(date,db):
@@ -53,8 +52,8 @@ def predictADay(date,db):
     confidence = []
     powerChart = getPowerIndex(date,db)
     try:
-        powerChart.to_sql('PowerChart20',db,if_exists='append',index=False)
-        print 'inserted',date
+        powerChart.to_sql('PowerChartAll',db,if_exists='append',index=False)
+        print 'inserted powerChart',date
     except Exception as e:
         print e.message
     sql = 'SELECT * FROM Games where date(gameDay) = date(\'%s\') ' %date
@@ -78,39 +77,34 @@ def predictADay(date,db):
     predict['6P']=prediction
     predict['7C']=confidence
     predict = predict[['gameday','homeTeam','awayTeam','result','6P','7C']]
-    return predict
+    isCorrect = []
+    for item,row in predict.iterrows():
+        if row['result'] == row['6P']:
+            isCorrect.append(1)
+        else:
+            isCorrect.append(0)
+    predict['isCorrect'] = isCorrect
+    try:
+        predict.to_sql('AllGame',db,if_exists='append',index=False)
+        print 'inserted prediction',date
+    except Exception as e:
+        print e.message
 
 #Ten Game Score Diff Rule
 def predictAll(db):
-    isCorrect = []
-    predictAllTable = pd.DataFrame()
     end_date = date.today() - timedelta(days=1)
     start_date = date(2014,11,10)
     day_count = (end_date - start_date).days + 1
     for n in range(day_count):
         onDate = start_date + timedelta(n)
         print onDate
-        predictAllTable = predictAllTable.append(predictADay(onDate,db))
-    for item,row in predictAllTable.iterrows():
-        if row['result'] == row['6P']:
-            isCorrect.append(1)
-        else:
-            isCorrect.append(0)
-    predictAllTable['isCorrect'] = isCorrect
-    return predictAllTable.drop_duplicates()
+        predictADay(onDate,db)
 
 def __main__():
     db =  sqlite3.connect(r'c:\python data science\nbaScraping\data\nba.db')
-    #twentyGame = predictAll(db)
-    plotPowerChartTime('new york knicks','2015-04-12',db)
+    predictAll(db)
 
-'''
-    try:
-        twentyGame.to_sql('twentyGame',db,if_exists='append',index=False)
-        print 'inserted'
-    except Exception as e:
-        print 'failed',e.message
-'''
+
 
 
 
