@@ -9,8 +9,8 @@ import sqlite3
 def setupAllFinishedGames():
     db = sqlite3.connect(r'c:\python data science\nbaScraping\data\nba.db')
     cursor = db.cursor()
-    end_date = date.today() - timedelta(days=1)
-    start_date = date(2015,04,10)
+    end_date = date.today() - timedelta(days=2)
+    start_date = date(2014,10,28)
     day_count = (end_date - start_date).days + 1
     for n in range(day_count):
         onDate = start_date + timedelta(n)

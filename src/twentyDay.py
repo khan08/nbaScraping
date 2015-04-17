@@ -38,13 +38,14 @@ def getPowerIndex(date, db):
     powerDict={'gameday':dates, 'Name':teamName,'Power': scoreDiff}
     return pd.DataFrame(powerDict).sort(['Power'],ascending = 0)
 
-def plotPowerChartTime(team,date,db,ax = None):
-    sql = 'SELECT * FROM powerChart where date(gameDay) < date(\'%s\') and name = %r' %(date,team)
+def plotPowerChartTime(db,table,team,date,ax = None):
+    sql = 'SELECT * FROM %s' \
+          ' where date(gameDay) < date(\'%s\') and name = %r' %(table,date,team)
     print sql
     powerChart = pd.read_sql(sql,db)
     print powerChart
     powerChart['gameday']=pd.to_datetime(powerChart['gameday'])
-    return powerChart.plot(x='gameday',y='power',title=team, ax = ax)
+    return powerChart.plot(x='gameday',y='Power',title='Power Chart', ax = ax)
     #print powerChart
 
 def predictADay(date,db):
