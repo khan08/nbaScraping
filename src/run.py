@@ -12,11 +12,10 @@ def plotAll():
     for team in teams:
         powerChart = getPower(db,'PowerChartAll',team,'2015-04-15')
         powerChart.plot(x='gameday',y='Power')
-        plt.savefig(r'\python data science\nbaScraping\bin/'+team+r'.png')
+        plt.savefig(r'\python data science\nbaScraping\out/'+team+r'.png')
 
 
 
-plotAll()
 
 
 def getMeanStd(a):
@@ -30,10 +29,10 @@ pd.DataFrame.hist(powerChart,ax=ax, bins = 20)
 plt.show()
 '''
 
-gameScore = getGameScoreDiff(db,'golden state warriors','2015-04-15')
+gameScore = getGameScoreDiff(db,'toronto raptors','2015-04-15')
 mean,std = getMeanStd(gameScore)
 plt.hist(gameScore,bins = (-30,-25,-20,-15,-10,-5,0,5,10,15,20,25,30))
+plt.savefig(r'\python data science\nbaScraping\out/TOR_hist.png')
 print mean,std
-plt.show()
 
 
